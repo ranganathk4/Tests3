@@ -12,7 +12,7 @@ class comms3:
 
 	def upload(self, bucket, filename):
 		print 'Trying to connect ...........'
-		conn = tinys3.Connection('AKIAJ2LINN3AGWQPIF3A','G0qJbeLpEzKWhRE3J7x0sCbn+8sD1KG5U0Lh/W8M',tls=True)
+		conn = tinys3.Connection('access_key','Secret_key',tls=True)
 		print "Connected to Ranganath's account .................."
 
 		print 'Uploading the file' + filename + ' to' + bucket + ' bucket' + '.................'
@@ -22,7 +22,7 @@ class comms3:
 
 	def download(self, bucket, filename):
 		print "Trying to connect ............."
-		conn = boto.connect_s3('AKIAJ2LINN3AGWQPIF3A','G0qJbeLpEzKWhRE3J7x0sCbn+8sD1KG5U0Lh/W8M')
+		conn = boto.connect_s3('access_key','secrete_key')
 
 		print "Successfully connected to Ranganath's Account ...................."
 		print "Listing the buckets available ............."
